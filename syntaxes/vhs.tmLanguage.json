@@ -1,0 +1,101 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "VHS",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#stringDoubles"
+		},
+		{
+			"include": "#stringSingles"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#names"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#units"
+		}
+	],
+	"repository": {
+		"operators": {
+			"patterns": [{
+				"name": "keyword.operator.vhs",
+				"match": "@|\\+"
+			}]
+		},
+		"numbers" : {
+			"patterns": [{
+				"name": "constant.numeric.vhs",
+				"match": "\\d+"
+			}]
+		},
+		"units" : {
+			"patterns": [{
+				"match": "(\\d+)(ms|s)",
+				"captures": {
+					"1" : {
+						"name": "keyword.other.unit.vhs"
+					},
+					"2" : {
+						"name": "keyword.other.unit.vhs"
+					}
+				}
+			}]
+		},
+		"names": {
+			"patterns": [{
+				"name": "entity.name.tag",
+				"match": "\\b(FontFamily|FontSize|Framerate|Height|Width|Theme|Padding|TypingSpeed|PlaybackSpeed|LineHeight|Framerate|LetterSpacing)\\b"
+			}]
+		},
+		"comments": {
+            "patterns": [
+                {
+                    "begin": "#",
+                    "end": "$",
+                    "name": "comment.line.number-sign.vhs"
+                }
+            ]
+        },
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.vhs",
+				"match": "\\b(Output|Set|Type|Left|Right|Up|Down|Backspace|Enter|Tab|Space|Ctrl|Sleep|Hide|Show|Escape)\\b"
+			}]
+		},
+		"stringSingles": {
+			"name": "string.quoted.single.vhs",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.vhs",
+					"match": "\\\\."
+				}
+			]
+		},
+		"stringDoubles": {
+			"name": "string.quoted.double.vhs",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.vhs",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.vhs"
+}
