@@ -1,8 +1,11 @@
 {
   "name": "vhs",
-  "displayName": "VHS",
-  "description": "",
+  "displayName": "VHS Syntax",
+  "description": "Syntax support for VHS .tape files",
   "version": "0.0.1",
+  "publisher": "griimick",
+  "homepage": "https://github.com/griimick/vscode-vhs#readme",
+  "icon": "images/vhs-logo.png",
   "engines": {
     "vscode": "^1.72.0"
   },

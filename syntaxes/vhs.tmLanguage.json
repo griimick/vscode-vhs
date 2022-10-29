@@ -6,25 +6,31 @@
 			"include": "#comments"
 		},
 		{
-			"include": "#stringDoubles"
+			"include": "#json"
 		},
 		{
-			"include": "#stringSingles"
+			"include": "#strings"
+		},
+		{
+			"include": "#output"
 		},
 		{
 			"include": "#operators"
 		},
 		{
-			"include": "#keywords"
+			"include": "#control"
 		},
 		{
-			"include": "#names"
+			"include": "#commands"
 		},
 		{
-			"include": "#numbers"
+			"include": "#settings"
 		},
 		{
 			"include": "#units"
+		},
+		{
+			"include": "#numbers"
 		}
 	],
 	"repository": {
@@ -34,67 +40,76 @@
 				"match": "@|\\+"
 			}]
 		},
-		"numbers" : {
-			"patterns": [{
-				"name": "constant.numeric.vhs",
-				"match": "\\d+"
-			}]
-		},
-		"units" : {
-			"patterns": [{
-				"match": "(\\d+)(ms|s)",
+		"output": {
+				"name": "keyword.control.vhs",
+				"match": "Output ([\\.\\-\/A-Za-z0-9%]+)",
 				"captures": {
 					"1" : {
-						"name": "keyword.other.unit.vhs"
-					},
-					"2" : {
-						"name": "keyword.other.unit.vhs"
+						"name": "string.quoted.other.vhs"
 					}
 				}
-			}]
 		},
-		"names": {
-			"patterns": [{
-				"name": "entity.name.tag",
-				"match": "\\b(FontFamily|FontSize|Framerate|Height|Width|Theme|Padding|TypingSpeed|PlaybackSpeed|LineHeight|Framerate|LetterSpacing)\\b"
-			}]
+		"numbers" : {
+			"patterns": [
+				{
+					"name": "constant.numeric.vhs",
+					"match": "\\d*\\.?\\d+"
+				},
+				{
+					"name": "constant.numeric.vhs",
+					"match": "\\d+"
+				}
+			]
+		},
+		"units" : {
+			"match": "(\\d+)(ms|s)",
+			"captures": {
+				"1" : {
+					"patterns": [{
+						"include": "#numbers"
+					}]
+				},
+				"2" : {
+					"name": "keyword.other.unit.vhs"
+				}
+			}
+		},
+		"json": {
+			"name": "string.quoted.other.vhs",
+			"match": "\\{.*\\}"
+		},
+		"control": {
+			"name": "keyword.control.vhs",
+			"match": "\\bCtrl\\+[A-Z]\\b"
+		},
+		"settings": {
+			"name": "entity.name.type.vhs",
+			"match": "\\b(FontFamily|FontSize|Framerate|Height|Width|Theme|Padding|TypingSpeed|PlaybackSpeed|LineHeight|Framerate|LetterSpacing)\\b"
 		},
 		"comments": {
-            "patterns": [
-                {
-                    "begin": "#",
-                    "end": "$",
-                    "name": "comment.line.number-sign.vhs"
-                }
-            ]
+			"begin": "#",
+			"end": "$",
+			"name": "comment.line.number-sign.vhs"
         },
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.vhs",
-				"match": "\\b(Output|Set|Type|Left|Right|Up|Down|Backspace|Enter|Tab|Space|Ctrl|Sleep|Hide|Show|Escape)\\b"
-			}]
+		"commands": {
+			"name": "keyword.control.vhs",
+			"match": "\\b(Output|Set|Type|Left|Right|Up|Down|Ctrl|Backspace|Enter|Tab|Space|Sleep|Hide|Show|Escape)\\b"
 		},
-		"stringSingles": {
-			"name": "string.quoted.single.vhs",
-			"begin": "'",
-			"end": "'",
+		"strings": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.vhs",
-					"match": "\\\\."
-				}
-			]
-		},
-		"stringDoubles": {
-			"name": "string.quoted.double.vhs",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
+					"name": "string.quoted.single.vhs",
+					"begin": "'",
+					"end": "'"
+				},
 				{
-					"name": "constant.character.escape.vhs",
-					"match": "\\\\."
+
+					"name": "string.quoted.double.vhs",
+					"begin": "\"",
+					"end": "\""
 				}
 			]
+
 		}
 	},
 	"scopeName": "source.vhs"
