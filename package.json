@@ -6,6 +6,7 @@
   "publisher": "griimick",
   "homepage": "https://github.com/griimick/vscode-vhs#readme",
   "icon": "images/vhs-logo.png",
+  "repository": "https://github.com/griimick/vscode-vhs",
   "engines": {
     "vscode": "^1.72.0"
   },
@@ -17,7 +18,11 @@
       "id": "tape",
       "aliases": ["VHS", "tape"],
       "extensions": [".tape"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./language-configuration.json",
+      "icon": {
+          "light": "./images/vhs-icon.png",
+          "dark": "./images/vhs-icon.png"
+      }
     }],
     "grammars": [{
       "language": "tape",
