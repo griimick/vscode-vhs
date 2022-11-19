@@ -83,8 +83,8 @@
 			"match": "\\bCtrl\\+[A-Z]\\b"
 		},
 		"settings": {
-			"name": "entity.name.type.vhs",
-			"match": "\\b(FontFamily|FontSize|Framerate|Height|Width|Theme|Padding|TypingSpeed|PlaybackSpeed|LineHeight|Framerate|LetterSpacing)\\b"
+			"name": "entity.name.tag.vhs",
+			"match": "\\b(FontFamily|FontSize|LoopOffset|Shell|Height|Width|Theme|Padding|TypingSpeed|PlaybackSpeed|LineHeight|Framerate|LetterSpacing)\\b"
 		},
 		"comments": {
 			"begin": "#",
@@ -107,7 +107,14 @@
 					"name": "string.quoted.double.vhs",
 					"begin": "\"",
 					"end": "\""
+				},
+				{
+
+					"name": "string.quoted.other.vhs",
+					"begin": "`",
+					"end": "`"
 				}
+
 			]
 
 		}
