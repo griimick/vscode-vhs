@@ -1,0 +1,3 @@
+[submodule "tree-sitter-vhs"]
+	path = tree-sitter-vhs
+	url = https://github.com/charmbracelet/tree-sitter-vhs.git
