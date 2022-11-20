@@ -2,7 +2,7 @@
   "name": "vhs",
   "displayName": "VHS Syntax",
   "description": "Syntax support for VHS .tape files",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "griimick",
   "homepage": "https://github.com/griimick/vscode-vhs#readme",
   "icon": "images/vhs-logo.png",
@@ -14,20 +14,38 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "tape",
-      "aliases": ["VHS", "tape"],
-      "extensions": [".tape"],
-      "configuration": "./language-configuration.json",
-      "icon": {
+    "languages": [
+      {
+        "id": "tape",
+        "aliases": [
+          "VHS",
+          "tape"
+        ],
+        "extensions": [
+          ".tape"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
           "light": "./images/vhs-icon.png",
           "dark": "./images/vhs-icon.png"
+        }
       }
-    }],
-    "grammars": [{
-      "language": "tape",
-      "scopeName": "source.vhs",
-      "path": "./syntaxes/vhs.tmLanguage.json"
-    }]
+    ],
+    "grammars": [
+      {
+        "language": "tape",
+        "scopeName": "source.vhs",
+        "path": "./syntaxes/vhs.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "vsce": "^2.14.0"
+  },
+  "scripts": {
+    "clean": "rimraf vhs-*.vsix",
+    "vscode:publish": "vsce publish",
+    "build:extension": "vsce package"
   }
 }
