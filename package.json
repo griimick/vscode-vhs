@@ -44,7 +44,7 @@
     "vsce": "^2.14.0"
   },
   "scripts": {
-    "clean": "rimraf scala-*.vsix",
+    "clean": "rimraf vhs-*.vsix",
     "vscode:publish": "vsce publish",
     "build:extension": "vsce package"
   }
