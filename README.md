@@ -11,4 +11,4 @@ Check out [VHS](https://github.com/charmbracelet/vhs) by [Charm](https://charm.s
 1. Syntax Highlighting for VHS `.tape` files.
 2. Custom file icon for `.tape` files.
 3. Support **Toggle Line Comment** feature.
-4. Suport folding commands within `Hide`/`Show` section.
+4. Support folding commands within `Hide` and `Show` section.
