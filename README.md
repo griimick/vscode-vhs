@@ -2,7 +2,7 @@
 
 Visual Studio Code extension providing syntax support for [VHS](https://github.com/charmbracelet/vhs) `.tape` files.
 
-<img width="1344" alt="vscode-vhs" src="https://user-images.githubusercontent.com/10350864/198852360-01e2c56c-06ae-482e-b847-8761bf45e925.png">
+<img width="1383" alt="image" src="https://user-images.githubusercontent.com/10350864/202877071-d46f435e-3899-4e58-8228-a9838d66374c.png">
 
 Check out [VHS](https://github.com/charmbracelet/vhs) by [Charm](https://charm.sh/).
 
@@ -10,5 +10,5 @@ Check out [VHS](https://github.com/charmbracelet/vhs) by [Charm](https://charm.s
 
 1. Syntax Highlighting for VHS `.tape` files.
 2. Custom file icon for `.tape` files.
-3. Support **Toggle: Line Comment** feature.
+3. Support **Toggle Line Comment** feature.
 4. Suport folding commands within `Hide`/`Show` section.
