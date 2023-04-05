@@ -84,7 +84,7 @@
 		},
 		"settings": {
 			"name": "entity.name.tag.vhs",
-			"match": "\\b(FontFamily|FontSize|LoopOffset|Shell|Height|Width|Theme|Padding|TypingSpeed|PlaybackSpeed|LineHeight|Framerate|LetterSpacing)\\b"
+			"match": "\\b(FontFamily|FontSize|LoopOffset|Shell|Height|Width|Theme|Padding|TypingSpeed|PlaybackSpeed|LineHeight|Framerate|LetterSpacing|Margin|MarginFill|WindowBar|WindowBarSize|BorderRadius)\\b"
 		},
 		"comments": {
 			"begin": "#",
