@@ -2,6 +2,10 @@
 
 All notable changes to the "vhs" extension will be documented in this file.
 
+## v0.0.3
+
+- Add syntax highlighting for `Margin`, `MarginFill`, `BorderRadius`, `WindowBar`, `WindowBarSize` and `Require`
+
 ## v0.0.2
 
 - Add custom filetype icon for `.tape` files.
