@@ -1,3 +1,4 @@
+Require gum
 Output vhs-glow.gif
 
 Set Width 1600
@@ -6,14 +7,15 @@ Set Shell "fish"
 Set Theme "Catppuccin-Mocha"
 Set LoopOffset 10
 Set LoopOffset 50.55%
+Set Margin 10
+Set MarginFill "#FFFFFF"
+Set BorderRadius 10
+Set WindowBar "Colorful"
+Set WindowBarSize 40
 
 Sleep 1s
 
 Type "glow"
-
-Type `backtick`
-Type 'singleQuote'
-Type "doubleQuote"
 
 Sleep 100ms
 

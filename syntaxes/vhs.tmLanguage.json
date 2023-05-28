@@ -12,6 +12,9 @@
 			"include": "#strings"
 		},
 		{
+			"include": "#require"
+		},
+		{
 			"include": "#output"
 		},
 		{
@@ -39,6 +42,15 @@
 				"name": "keyword.operator.vhs",
 				"match": "@|\\+"
 			}]
+		},
+		"require": {
+				"name": "keyword.control.vhs",
+				"match": "Require ([\\.\\-\/A-Za-z0-9%]+)",
+				"captures": {
+					"1" : {
+						"name": "string.quoted.other.vhs"
+					}
+				}
 		},
 		"output": {
 				"name": "keyword.control.vhs",
@@ -93,7 +105,7 @@
         },
 		"commands": {
 			"name": "keyword.control.vhs",
-			"match": "\\b(Output|Set|Type|Left|Right|Up|Down|Ctrl|Backspace|Enter|Tab|Space|Sleep|Hide|Show|Escape)\\b"
+			"match": "\\b(Output|Set|Type|Left|Right|Up|Down|Ctrl|Backspace|Enter|Tab|Space|Sleep|Hide|Show|Escape|Require)\\b"
 		},
 		"strings": {
 			"patterns": [
