@@ -66,15 +66,11 @@
 				{
 					"name": "constant.numeric.vhs",
 					"match": "\\d*\\.?\\d+"
-				},
-				{
-					"name": "constant.numeric.vhs",
-					"match": "\\d+"
 				}
 			]
 		},
 		"units" : {
-			"match": "(\\d+)(ms|s)",
+			"match": "(\\d*\\.?\\d+)(ms|s)",
 			"captures": {
 				"1" : {
 					"patterns": [{
