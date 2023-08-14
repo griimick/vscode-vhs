@@ -38,30 +38,32 @@
 	],
 	"repository": {
 		"operators": {
-			"patterns": [{
-				"name": "keyword.operator.vhs",
-				"match": "@|\\+"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.operator.vhs",
+					"match": "@|\\+"
+				}
+			]
 		},
 		"require": {
-				"name": "keyword.control.vhs",
-				"match": "Require ([\\.\\-\/A-Za-z0-9%]+)",
-				"captures": {
-					"1" : {
-						"name": "string.quoted.other.vhs"
-					}
+			"name": "keyword.control.vhs",
+			"match": "Require ([\\.\\-\/A-Za-z0-9%]+)",
+			"captures": {
+				"1": {
+					"name": "string.quoted.other.vhs"
 				}
+			}
 		},
 		"output": {
-				"name": "keyword.control.vhs",
-				"match": "Output ([\\.\\-\/A-Za-z0-9%]+)",
-				"captures": {
-					"1" : {
-						"name": "string.quoted.other.vhs"
-					}
+			"name": "keyword.control.vhs",
+			"match": "Output ([\\.\\-\/A-Za-z0-9%]+)",
+			"captures": {
+				"1": {
+					"name": "string.quoted.other.vhs"
 				}
+			}
 		},
-		"numbers" : {
+		"numbers": {
 			"patterns": [
 				{
 					"name": "constant.numeric.vhs",
@@ -69,15 +71,17 @@
 				}
 			]
 		},
-		"units" : {
+		"units": {
 			"match": "(\\d*\\.?\\d+)(ms|s)",
 			"captures": {
-				"1" : {
-					"patterns": [{
-						"include": "#numbers"
-					}]
+				"1": {
+					"patterns": [
+						{
+							"include": "#numbers"
+						}
+					]
 				},
-				"2" : {
+				"2": {
 					"name": "keyword.other.unit.vhs"
 				}
 			}
@@ -98,7 +102,7 @@
 			"begin": "#",
 			"end": "$",
 			"name": "comment.line.number-sign.vhs"
-        },
+		},
 		"commands": {
 			"name": "keyword.control.vhs",
 			"match": "\\b(Output|Set|Type|Left|Right|Up|Down|Ctrl|Backspace|Enter|Tab|Space|Sleep|Hide|Show|Escape|Require)\\b"
@@ -111,20 +115,16 @@
 					"end": "'"
 				},
 				{
-
 					"name": "string.quoted.double.vhs",
 					"begin": "\"",
 					"end": "\""
 				},
 				{
-
 					"name": "string.quoted.other.vhs",
 					"begin": "`",
 					"end": "`"
 				}
-
 			]
-
 		}
 	},
 	"scopeName": "source.vhs"
